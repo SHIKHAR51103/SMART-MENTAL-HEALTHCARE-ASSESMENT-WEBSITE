@@ -1,0 +1,77 @@
+<!--<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <title>WAIS Test</title>
+  <link rel="stylesheet" type="text/css" href="WAIS_STYLE.css">
+</head>
+<body>
+  <header>
+    <h1>WAIS Test</h1>
+  </header>
+  
+  <div class="container">
+    <form id="waisForm">
+      <label for="name">Name:</label>
+      <input type="text" id="name" required>
+      
+      <label for="age">Age:</label>
+      <input type="number" id="age" required>
+      
+      <h2>WAIS Test Questionnaire</h2>
+      
+      <p id="instructions">In this task, you will see a series of symbols on the screen. Your task is to indicate whether each symbol matches the target symbol. You have 2 minutes to complete as many symbols as possible. Please press 'y' if the symbol matches the target, or 'n' if it does not.</p>
+      
+      <button type="submit">Start Test</button>
+    </form>
+  </div>
+
+  <script src="WAIS_JS.js"></script>
+</body>
+</html>-->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <title>WAIS Test</title>
+  <link rel="stylesheet" type="text/css" href="WAIS_STYLE.css">
+  
+</head>
+<body>
+  <header>
+    <h1>WAIS Test</h1>
+  </header>
+  
+  <div class="container">
+    <form id="waisForm">
+      <label for="name">Name:</label>
+      <input type="text" id="name" required>
+      
+      <label for="age">Age:</label>
+      <input type="number" id="age" required>
+
+      <label>Gender:</label>
+      
+      <input type="radio" id="male" name="gender" value="male" required>
+      <label for="male">Male</label>
+      
+      <input type="radio" id="female" name="gender" value="female"> 
+      <label for="female">Female</label>
+      
+      <h2>WAIS Test Questionnaire</h2>
+      
+      <p id="instructions">In this task, you will see a series of symbols on the screen. Your task is to indicate whether each symbol matches the target symbol. You have 2 minutes to complete as many symbols as possible. Please press 'Yes' if the symbol matches the target, or 'No' if it does not.</p>
+      
+      <button type="submit">Start Test</button>
+    </form>
+  </div>
+
+  <div id="responseDisplay"></div>
+  <div id="symbolDisplay"></div>
+  <div id="score"></div>
+  <div id="userData"></div>
+
+  <script src="WAIS_JS.js"></script>
+</body>
+</html>

@@ -1,0 +1,259 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+
+  <title>Sanjeevani</title>
+  <link rel="stylesheet" href="css/test.css" type="text/css">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-9ndCyUaIbzAi2FUVXJi0CjmCapSmO7SnpJef0486qhLnuZ2cdeRhO02iuK6FUUVM" crossorigin="anonymous">
+
+  <style>
+    /* Custom CSS styles for the header, body, and footer */
+    body {
+      font-family: Arial, sans-serif;
+      background-color: #f2f2f2;
+    }
+
+    .navbar {
+      background-color: #333;
+      color: #fff;
+      font-size: 18px;
+      font-weight: bold;
+    }
+
+    .navbar-brand {
+      font-size: 24px;
+      padding: 10px 20px;
+    }
+
+    .navbar-toggler {
+      border: none;
+    }
+
+    .navbar-toggler-icon {
+      color: #fff;
+    }
+
+    .offcanvas-header {
+      background-color: #333;
+      color: #fff;
+      font-size: 18px;
+      font-weight: bold;
+    }
+
+    .offcanvas-body {
+      background-color: #f2f2f2;
+      padding: 20px;
+    }
+
+    .featured {
+      text-align: center;
+      padding: 100px 20px;
+    }
+
+    .featured h3 {
+      font-size: 36px;
+      margin-bottom: 20px;
+    }
+
+    .featured p {
+      font-size: 18px;
+      line-height: 1.6;
+    }
+
+    .btn-primary {
+      background-color: #333;
+      border-color: #333;
+      font-size: 18px;
+      padding: 10px 20px;
+      font-weight: bold;
+    }
+
+    .blog {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      padding: 20px;
+    }
+
+
+    .card {
+      margin: 10px;
+      max-width: 300px;
+      border: 1px solid #ccc;
+      border-radius: 5px;
+      overflow: hidden;
+      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+      transition: box-shadow 0.3s ease-in-out;
+    }
+
+    .card:hover {
+      box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+    }
+
+    .card-img-top {
+      max-height: 200px;
+      object-fit: cover;
+    }
+
+    .card-body {
+      padding: 20px;
+    }
+
+    .card-title {
+      font-size: 24px;
+      font-weight: bold;
+      margin-bottom: 10px;
+    }
+
+    .card-text {
+      font-size: 16px;
+      line-height: 1.6;
+    }
+
+    .footer {
+      background-color: #333;
+      color: #fff;
+      text-align: center;
+      padding: 20px;
+    }
+
+    .footer p {
+      font-size: 16px;
+    }
+
+    .footer a {
+      color: #fff;
+      text-decoration: none;
+      font-weight: bold;
+    }
+
+    .footer a:hover {
+      text-decoration: underline;
+    }
+  </style>
+
+</head>
+
+<body>
+  <nav class="navbar bg-body-tertiary fixed-top">
+    <div class="container-fluid">
+      <a class="navbar-brand" href="test.html">Sanjeevani</a>
+
+      <button class="navbar-toggler" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasNavbar"
+        aria-controls="offcanvasNavbar" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+
+      <div class="offcanvas offcanvas-end" tabindex="-1" id="offcanvasNavbar" aria-labelledby="offcanvasNavbarLabel">
+        <div class="offcanvas-header">
+          <h5 class="offcanvas-title" id="offcanvasNavbarLabel">Sanjeevani | Menu</h5>
+          <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+        </div>
+
+        <div class="offcanvas-body">
+          <ul class="navbar-nav justify-content-end flex-grow-1 pe-3">
+            <li class="nav-item">
+              <a class="nav-link active" aria-current="page" href="test.html">Home</a>
+            </li>
+            <!-- <li class="nav-item">
+              <a class="nav-link" href="#">All tests</a>
+            </li> -->
+            <li class="nav-item dropdown">
+              <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown"
+                aria-expanded="false">Expand tests</a>
+              <ul class="dropdown-menu">
+                <li><a class="dropdown-item" href="EQI_HTML.html">Emotional Intelligence Test (EQI)</a></li>
+                <li><a class="dropdown-item" href="BDI_HTML.html">Beck's Depression Inventory (BDI)</a></li>
+                <li><a class="dropdown-item" href="WAIS_HTML.html">Wechsler Adult Intelligence Scale (WAIS)</a></li>
+                <li><a class="dropdown-item" href="PSS_HTML.html">Perceived Stress Scale (PSS)</a></li>
+                <li><a class="dropdown-item" href="COLOR_TEST.html">Color Name Guessing Test</a></li>
+              </ul>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </nav>
+
+  <div class="featured">
+    <h3>Welcome,</h3>
+    <p>
+      Take the psychological tests today and find out more about yourself,
+      increasing awareness towards your mental health.
+    </p>
+    <a href="test.html">
+      <button type="button" class="btn btn-primary">Get Started</button>
+    </a>
+  </div>
+
+  <ul class="blog">
+    <h3>Take your test today,</h3>
+
+    <div class="card">
+      <a href="EQI_HTML.html">
+        <!-- <img src="https://example.com/eqi_test_image.jpg" class="card-img-top" alt="EQI Test"> -->
+      </a>
+      <div class="card-body">
+        <h5 class="card-title">Emotional Intelligence Test (EQI)</h5>
+        <p class="card-text">Take the EQI test to understand your emotional intelligence level.</p>
+        <a href="EQI_HTML.html" class="btn btn-primary">Go to Test</a>
+      </div>
+    </div>
+
+    <div class="card">
+      <a href="BDI_HTML.html">
+        <!-- <img src="https://example.com/bdi_test_image.jpg" class="card-img-top" alt="BDI Test"> -->
+      </a>
+      <div class="card-body">
+        <h5 class="card-title">Beck's Depression Inventory (BDI)</h5>
+        <p class="card-text">Take the BDI test to assess the severity of your depression.</p>
+        <a href="BDI_HTML.html" class="btn btn-primary">Go to Test</a>
+      </div>
+    </div>
+
+    <div class="card">
+      <a href="WAIS_HTML.html">
+        <!-- <img src="https://example.com/wais_test_image.jpg" class="card-img-top" alt="WAIS Test"> -->
+      </a>
+      <div class="card-body">
+        <h5 class="card-title">Wechsler Adult Intelligence Scale (WAIS)</h5>
+        <p class="card-text">Take the WAIS test to measure your cognitive abilities and IQ.</p>
+        <a href="WAIS_HTML.html" class="btn btn-primary">Go to Test</a>
+      </div>
+    </div>
+
+    <div class="card">
+      <a href="PSS_HTML.html">
+        <!-- <img src="https://example.com/pss_test_image.jpg" class="card-img-top" alt="PSS Test"> -->
+      </a>
+      <div class="card-body">
+        <h5 class="card-title">Perceived Stress Scale (PSS)</h5>
+        <p class="card-text">Take the PSS test to evaluate your perception of stress.</p>
+        <a href="PSS_HTML.html" class="btn btn-primary">Go to Test</a>
+      </div>
+    </div>
+
+    <div class="card">
+      <a href="COLOR_TEST.html">
+        <!-- <img src="https://example.com/color_test_image.jpg" class="card-img-top" alt="Color Test"> -->
+      </a>
+      <div class="card-body">
+        <h5 class="card-title">Color Name Guessing Test</h5>
+        <p class="card-text">Guess the color name in this fun test of perception and memory.</p>
+        <a href="COLOR_TEST.html" class="btn btn-primary">Go to Test</a>
+      </div>
+    </div>
+  </ul>
+
+  <div class="footer">
+    <p>&copy; 2023 Sanjeevani. All rights reserved.<a href="#" target="_blank"></a></p>
+  </div>
+
+</body>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"
+  integrity="sha384-geWF76RCwLtnZ8qwWowPQNguL3RmwHVBC9FhGdlKrxdiJJigb/j/68SIy3Te4Bkz" crossorigin="anonymous"></script>
+
+</html>

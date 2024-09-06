@@ -1,0 +1,312 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <title>Color Name Guessing Test</title>
+  <style>
+    body {
+      text-align: center;
+      background-color: #f2f2f2;
+      font-family: Arial, sans-serif;
+    }
+
+    h1 {
+      color: #333;
+      margin-top: 40px;
+      font-size: 36px;
+    }
+    
+    #colorContainer {
+      margin-top: 30px;
+    }
+
+    #colorText {
+      font-size: 48px;
+      font-weight: bold;
+    }
+
+    .inputContainer {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      margin-top: 20px;
+    }
+
+    #colorInput {
+      margin-right: 10px;
+      padding: 10px;
+      font-size: 20px;
+      border: 2px solid #333;
+      border-radius: 5px;
+    }
+
+    #textInput {
+      margin-left: 10px;
+      padding: 10px;
+      font-size: 20px;
+      border: 2px solid #333;
+      border-radius: 5px;
+    }
+
+    #submitBtn {
+      margin-top: 20px;
+      padding: 10px 20px;
+      font-size: 20px;
+      font-weight: bold;
+      background-color: #333;
+      color: #fff;
+      border: none;
+      border-radius: 5px;
+      cursor: pointer;
+    }
+
+    #scoreText {
+      margin-top: 30px;
+      font-size: 24px;
+      font-weight: bold;
+    }
+  </style>
+</head>
+<body>
+  <h1>Color Name Guessing Test</h1>
+  <div id="colorContainer">
+    <p id="colorText">Guess the color name:</p>
+    <div class="inputContainer">
+      <input type="text" id="colorInput" placeholder="Enter color">
+      <input type="text" id="textInput" placeholder="Enter text">
+    </div>
+    <button id="submitBtn" onclick="checkColor()">Submit</button>
+  </div>
+  <p id="scoreText"></p>
+
+  <script>
+//     var colorNames = ["Red", "Green", "Blue", "Yellow", "Orange", "Purple", "Pink", "Brown", "Gray", "Black"];
+//     var colorText = document.getElementById("colorText");
+//     var colorInput = document.getElementById("colorInput");
+//     var textInput = document.getElementById("textInput");
+//     var scoreText = document.getElementById("scoreText");
+//     var score = 0;
+//     var attempt = 1;
+
+//     function chooseColor() {
+//       var randomIndex = Math.floor(Math.random() * colorNames.length);
+//       var colorName = colorNames[randomIndex];
+//       var color = getRandomColor();
+
+//       colorText.innerHTML = colorName;
+//       colorText.style.color = color;
+//     }
+
+//     function getRandomColor() {
+//       var randomColorIndex = Math.floor(Math.random() * colorNames.length);
+//       var color = colorNames[randomColorIndex];
+//       return color;
+//     }
+
+//     function checkColor() {
+//       var guessColor = colorInput.value.toLowerCase();
+//       var guessText = textInput.value;
+//       var colorOfText = colorText.style.color.toLowerCase();
+//       var colorName = colorText.innerHTML;
+
+//       if (guessColor === colorOfText && guessText.toLowerCase() === colorName.toLowerCase()) {
+//         score++;
+//       }
+
+//       colorInput.value = "";
+//       textInput.value = "";
+
+//       attempt++;
+//       if (attempt > 5) {
+//         showScore();
+//       } else {
+//         chooseColor();
+//       }
+//     }
+
+//     function showScore() {
+//       var scorePercentage = Math.floor((score / 5) * 100);
+//       scoreText.innerHTML = "Your score: " + scorePercentage + "%";
+//       document.getElementById("colorContainer").style.display = "none";
+//     }
+
+//     chooseColor();
+//     var colorNames = ["Red", "Green", "Blue", "Yellow", "Orange", "Purple", "Pink", "Brown", "Gray", "Black"];
+// var colorText = document.getElementById("colorText");
+// var colorInput = document.getElementById("colorInput");
+// var textInput = document.getElementById("textInput");
+// var scoreText = document.getElementById("scoreText");
+// var score = 0;
+// var attempt = 1;
+
+// function chooseColor() {
+//   var randomIndex = Math.floor(Math.random() * colorNames.length);
+//   var colorName = colorNames[randomIndex];
+//   var color = getRandomColor();
+
+//   colorText.innerHTML = colorName;
+//   colorText.style.color = color;
+// }
+
+// function getRandomColor() {
+//   var randomColorIndex = Math.floor(Math.random() * colorNames.length);
+//   var color = colorNames[randomColorIndex];
+//   return color;
+// }
+
+// function checkColor() {
+//   var guessColor = colorInput.value.toLowerCase();
+//   var guessText = textInput.value;
+//   var colorOfText = colorText.style.color.toLowerCase();
+//   var colorName = colorText.innerHTML;
+
+//   if (guessColor === colorOfText && guessText.toLowerCase() === colorName.toLowerCase()) {
+//     score++;
+//   }
+
+//   colorInput.value = "";
+//   textInput.value = "";
+
+//   attempt++;
+//   if (attempt > 5) {
+//     showScore();
+//     saveScore();
+//   } else {
+//     chooseColor();
+//   }
+// }
+
+// function showScore() {
+//   var scorePercentage = Math.floor((score / 5) * 100);
+//   scoreText.innerHTML = "Your score: " + scorePercentage + "%";
+//   document.getElementById("colorContainer").style.display = "none";
+// }
+
+// function saveScore() {
+//   var username = prompt("Enter your name:");
+//   var data = {
+//     username: username,
+//     score: score
+//   };
+
+//   // Make an AJAX POST request to save the score to the server
+//   var xhr = new XMLHttpRequest();
+//   xhr.open("POST", "/submit", true);
+//   xhr.setRequestHeader("Content-Type", "application/json");
+//   xhr.onreadystatechange = function () {
+//     if (xhr.readyState === 4 && xhr.status === 200) {
+//       console.log("Score saved successfully!");
+//     }
+//   };
+//   xhr.send(JSON.stringify(data));
+// }
+
+// chooseColor();
+var colorNames = ["Red", "Green", "Blue", "Yellow", "Orange", "Purple", "Pink", "Brown", "Gray", "Black"];
+var colorText = document.getElementById("colorText");
+var colorInput = document.getElementById("colorInput");
+var textInput = document.getElementById("textInput");
+var scoreText = document.getElementById("scoreText");
+var score = 0;
+var attempt = 1;
+var file = null; // Store the file reference here
+
+function chooseColor() {
+  var randomIndex = Math.floor(Math.random() * colorNames.length);
+  var colorName = colorNames[randomIndex];
+  var color = getRandomColor();
+
+  colorText.innerHTML = colorName;
+  colorText.style.color = color;
+}
+
+function getRandomColor() {
+  var randomColorIndex = Math.floor(Math.random() * colorNames.length);
+  var color = colorNames[randomColorIndex];
+  return color;
+}
+
+function checkColor() {
+  var guessColor = colorInput.value.toLowerCase();
+  var guessText = textInput.value;
+  var colorOfText = colorText.style.color.toLowerCase();
+  var colorName = colorText.innerHTML;
+
+  if (guessColor === colorOfText && guessText.toLowerCase() === colorName.toLowerCase()) {
+    score++;
+  }
+
+  colorInput.value = "";
+  textInput.value = "";
+
+  attempt++;
+  if (attempt > 5) {
+    showScore();
+    saveScore();
+  } else {
+    chooseColor();
+  }
+}
+
+function showScore() {
+  var scorePercentage = Math.floor((score / 5) * 100);
+  scoreText.innerHTML = "Your score: " + scorePercentage + "%";
+  document.getElementById("colorContainer").style.display = "none";
+}
+
+function saveScore() {
+  var username = prompt("Enter your name:");
+  var data = {
+    username: username,
+    score: score
+  };
+
+  var blob = new Blob([toCSV(data)], { type: 'text/csv' });
+
+  if (file) {
+    // If the file already exists, append the new data
+    file.createWriter(function (writer) {
+      writer.onwriteend = function () {
+        console.log("Score saved successfully!");
+      };
+      writer.onerror = function (e) {
+        console.error("Error writing to file:", e);
+      };
+      writer.seek(writer.length); // Move the file pointer to the end
+      writer.write(blob);
+    });
+  } else {
+    // If the file doesn't exist, create a new one
+    window.requestFileSystem(window.PERSISTENT, 1024 * 1024, function (fs) {
+      fs.root.getFile('color.csv', { create: true }, function (fileEntry) {
+        file = fileEntry;
+        file.createWriter(function (writer) {
+          writer.onwriteend = function () {
+            console.log("Score saved successfully!");
+          };
+          writer.onerror = function (e) {
+            console.error("Error writing to file:", e);
+          };
+          writer.write(blob);
+        });
+      }, function (e) {
+        console.error("Error creating file:", e);
+      });
+    }, function (e) {
+      console.error("Error requesting file system:", e);
+    });
+  }
+}
+
+function toCSV(obj) {
+  var keys = Object.keys(obj);
+  var values = Object.values(obj);
+  return keys.join(",") + "\n" + values.join(",") + "\n";
+}
+
+chooseColor();
+
+
+  </script>
+</body>
+</html>

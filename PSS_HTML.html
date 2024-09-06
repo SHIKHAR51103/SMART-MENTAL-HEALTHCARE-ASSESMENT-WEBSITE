@@ -1,0 +1,352 @@
+<!--<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <title>Perceived Stress Scale (PSS)</title>
+    <link rel="stylesheet" type="text/css" href="PSS_CSS.css" />
+  </head>
+  <body>
+    <div class="container">
+      <h1>Perceived Stress Scale (PSS)</h1>
+      <form id="pss-form">
+        <p>
+          Instructions: The questions in this scale ask you about your feelings
+          and thoughts during the last month. In each case, you will be asked to
+          indicate how often you felt or thought a certain way.
+        </p>
+
+        <div class="question">
+          <label
+            >In the last month, how often have you been upset because of
+            something that happened unexpectedly?</label
+          >
+          <select name="q1" id="q1">
+            <option value="0">Never</option>
+            <option value="1">Almost Never</option>
+            <option value="2">Sometimes</option>
+            <option value="3">Fairly Often</option>
+            <option value="4">Very Often</option>
+          </select>
+        </div>
+        <div class="question">
+          <label
+            >In the last month, how often have you felt that you were unable to
+            control the important things in your life?</label
+          >
+          <select name="q2" id="q2">
+            <option value="0">Never</option>
+            <option value="1">Almost Never</option>
+            <option value="2">Sometimes</option>
+            <option value="3">Fairly Often</option>
+            <option value="4">Very Often</option>
+          </select>
+        </div>
+
+        <div class="question">
+          <label
+            >In the last month, how often have you felt nervous and
+            “stressed”?</label
+          >
+          <select name="q3" id="q3">
+            <option value="0">Never</option>
+            <option value="1">Almost Never</option>
+            <option value="2">Sometimes</option>
+            <option value="3">Fairly Often</option>
+            <option value="4">Very Often</option>
+          </select>
+        </div>
+
+        <div class="question">
+          <label
+            >In the last month, how often have you felt confident about your
+            ability to handle your personal problems?</label
+          >
+          <select name="q4" id="q4">
+            <option value="4">Never</option>
+            <option value="3">Almost Never</option>
+            <option value="2">Sometimes</option>
+            <option value="1">Fairly Often</option>
+            <option value="0">Very Often</option>
+          </select>
+        </div>
+
+        <div class="question">
+          <label
+            >In the last month, how often have you felt that things were going
+            your way?</label
+          >
+          <select name="q5" id="q5">
+            <option value="4">Never</option>
+            <option value="3">Almost Never</option>
+            <option value="2">Sometimes</option>
+            <option value="1">Fairly Often</option>
+            <option value="0">Very Often</option>
+          </select>
+        </div>
+
+        <div class="question">
+          <label
+            >In the last month, how often have you found that you could not cope
+            with all the things that you had to do?</label
+          >
+          <select name="q6" id="q6">
+            <option value="0">Never</option>
+            <option value="1">Almost Never</option>
+            <option value="2">Sometimes</option>
+            <option value="3">Fairly Often</option>
+            <option value="4">Very Often</option>
+          </select>
+        </div>
+
+        <div class="question">
+          <label
+            >In the last month, how often have you been able to control
+            irritations in your life?</label
+          >
+          <select name="q7" id="q7">
+            <option value="4">Never</option>
+            <option value="3">Almost Never</option>
+            <option value="2">Sometimes</option>
+            <option value="1">Fairly Often</option>
+            <option value="0">Very Often</option>
+          </select>
+        </div>
+
+        <div class="question">
+          <label
+            >In the last month, how often have you felt that you were on top of
+            things?</label
+          >
+          <select name="q8" id="q8">
+            <option value="4">Never</option>
+            <option value="3">Almost Never</option>
+            <option value="2">Sometimes</option>
+            <option value="1">Fairly Often</option>
+            <option value="0">Very Often</option>
+          </select>
+        </div>
+
+        <div class="question">
+          <label
+            >In the last month, how often have you been angered because of
+            things that happened that were outside of your control?</label
+          >
+          <select name="q9" id="q9">
+            <option value="0">Never</option>
+            <option value="1">Almost Never</option>
+            <option value="2">Sometimes</option>
+            <option value="3">Fairly Often</option>
+            <option value="4">Very Often</option>
+          </select>
+        </div>
+
+        <div class="question">
+          <label
+            >In the last month, how often have you felt difficulties were piling
+            up so high that you could not overcome them?</label
+          >
+          <select name="q10" id="q10">
+            <option value="0">Never</option>
+            <option value="1">Almost Never</option>
+            <option value="2">Sometimes</option>
+            <option value="3">Fairly Often</option>
+            <option value="4">Very Often</option>
+          </select>
+        </div>
+
+        
+        <div class="question">
+          <button type="button" onclick="calculateScore()">
+            Calculate Score
+          </button>
+        </div>
+      </form>
+
+      <div id="result" class="hidden">
+        <h2>Your Perceived Stress Score:</h2>
+        <p id="score"></p>
+        <h3>Interpretation:</h3>
+        <p id="interpretation"></p>
+      </div>
+    </div>
+
+    <script src="PSS_JS.js"></script>
+  </body>
+</html>-->
+
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <title>Perceived Stress Scale (PSS)</title>
+    <link rel="stylesheet" type="text/css" href="PSS_CSS.css" />
+  </head>
+  <body>
+    <div class="container">
+      <h1>Perceived Stress Scale (PSS)</h1>
+      <form id="pss-form">
+        <p>
+          Instructions: The questions in this scale ask you about your feelings
+          and thoughts during the last month. In each case, you will be asked to
+          indicate how often you felt or thought a certain way.
+        </p>
+
+        <div class="question">
+          <label
+            >In the last month, how often have you been upset because of
+            something that happened unexpectedly?</label
+          >
+          <select name="q1" id="q1">
+            <option value="0">Never</option>
+            <option value="1">Almost Never</option>
+            <option value="2">Sometimes</option>
+            <option value="3">Fairly Often</option>
+            <option value="4">Very Often</option>
+          </select>
+        </div>
+        <!-- Repeat the same structure for other questions -->
+		<div class="question">
+          <label
+            >In the last month, how often have you felt that you were unable to
+            control the important things in your life?</label
+          >
+          <select name="q2" id="q2">
+            <option value="0">Never</option>
+            <option value="1">Almost Never</option>
+            <option value="2">Sometimes</option>
+            <option value="3">Fairly Often</option>
+            <option value="4">Very Often</option>
+          </select>
+        </div>
+
+        <div class="question">
+          <label
+            >In the last month, how often have you felt nervous and
+            “stressed”?</label
+          >
+          <select name="q3" id="q3">
+            <option value="0">Never</option>
+            <option value="1">Almost Never</option>
+            <option value="2">Sometimes</option>
+            <option value="3">Fairly Often</option>
+            <option value="4">Very Often</option>
+          </select>
+        </div>
+
+        <div class="question">
+          <label
+            >In the last month, how often have you felt confident about your
+            ability to handle your personal problems?</label
+          >
+          <select name="q4" id="q4">
+            <option value="4">Never</option>
+            <option value="3">Almost Never</option>
+            <option value="2">Sometimes</option>
+            <option value="1">Fairly Often</option>
+            <option value="0">Very Often</option>
+          </select>
+        </div>
+
+        <div class="question">
+          <label
+            >In the last month, how often have you felt that things were going
+            your way?</label
+          >
+          <select name="q5" id="q5">
+            <option value="4">Never</option>
+            <option value="3">Almost Never</option>
+            <option value="2">Sometimes</option>
+            <option value="1">Fairly Often</option>
+            <option value="0">Very Often</option>
+          </select>
+        </div>
+
+        <div class="question">
+          <label
+            >In the last month, how often have you found that you could not cope
+            with all the things that you had to do?</label
+          >
+          <select name="q6" id="q6">
+            <option value="0">Never</option>
+            <option value="1">Almost Never</option>
+            <option value="2">Sometimes</option>
+            <option value="3">Fairly Often</option>
+            <option value="4">Very Often</option>
+          </select>
+        </div>
+
+        <div class="question">
+          <label
+            >In the last month, how often have you been able to control
+            irritations in your life?</label
+          >
+          <select name="q7" id="q7">
+            <option value="4">Never</option>
+            <option value="3">Almost Never</option>
+            <option value="2">Sometimes</option>
+            <option value="1">Fairly Often</option>
+            <option value="0">Very Often</option>
+          </select>
+        </div>
+
+        <div class="question">
+          <label
+            >In the last month, how often have you felt that you were on top of
+            things?</label
+          >
+          <select name="q8" id="q8">
+            <option value="4">Never</option>
+            <option value="3">Almost Never</option>
+            <option value="2">Sometimes</option>
+            <option value="1">Fairly Often</option>
+            <option value="0">Very Often</option>
+          </select>
+        </div>
+
+        <div class="question">
+          <label
+            >In the last month, how often have you been angered because of
+            things that happened that were outside of your control?</label
+          >
+          <select name="q9" id="q9">
+            <option value="0">Never</option>
+            <option value="1">Almost Never</option>
+            <option value="2">Sometimes</option>
+            <option value="3">Fairly Often</option>
+            <option value="4">Very Often</option>
+          </select>
+        </div>
+
+        <div class="question">
+          <label
+            >In the last month, how often have you felt difficulties were piling
+            up so high that you could not overcome them?</label
+          >
+          <select name="q10" id="q10">
+            <option value="0">Never</option>
+            <option value="1">Almost Never</option>
+            <option value="2">Sometimes</option>
+            <option value="3">Fairly Often</option>
+            <option value="4">Very Often</option>
+          </select>
+        </div>
+
+        <div class="question">
+          <button type="button" onclick="calculateScore()">
+            Calculate Score
+          </button>
+        </div>
+      </form>
+
+      <div id="result" class="hidden">
+        <h2>Your Perceived Stress Score:</h2>
+        <p id="score"></p>
+        <h3>Interpretation:</h3>
+        <p id="interpretation"></p>
+      </div>
+    </div>
+
+    <script src="PSS_JS.js"></script>
+  </body>
+</html>
+

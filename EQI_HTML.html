@@ -1,0 +1,278 @@
+<!--<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Emotional Intelligence Test</title>
+  <link rel="stylesheet" href="EQI_STYLE.css">
+</head>
+<body>
+
+  <div class="intro-container">
+    <h1>Welcome to the Emotional Intelligence Test</h1>
+    <form id="introForm" Z>
+      <label for="name">Name:</label>
+      <input type="text" id="name" name="name" required><br><br>
+      <label for="age">Age:</label>
+      <input type="number" id="age" name="age" required><br><br>
+      <label for="gender">Gender:</label>
+      <select id="gender" name="gender" required>
+        <option value="male">Male</option>
+        <option value="female">Female</option>
+        <option value="other">Other</option>
+      </select><br><br>
+      <button type="button" id="startTest">Start Test</button>
+    </form>
+  </div>
+
+  <div class="test-container" id="testContainer" style="display:none;">
+    <h1>EQ Test</h1>
+    <form id="eqForm" action="EQI_SUBMIT.php" method="POST">
+      <div id="selfAwareness" class="section">
+        <h2>Section 1: Self-Awareness</h2>
+        <div class="question">
+          <label>I am able to recognize my emotions as they happen.</label><br>
+          <input type="radio" name="selfAwareness1" value="1"> A. Strongly Agree<br>
+          <input type="radio" name="selfAwareness1" value="2"> B. Agree<br>
+          <input type="radio" name="selfAwareness1" value="3"> C. Disagree<br>
+          <input type="radio" name="selfAwareness1" value="4"> D. Strongly Disagree<br>
+        </div>
+        <div class="question">
+          <label>I am aware of how my emotions impact others around me.</label><br>
+          <input type="radio" name="selfAwareness2" value="1"> A. Strongly Agree<br>
+          <input type="radio" name="selfAwareness2" value="2"> B. Agree<br>
+          <input type="radio" name="selfAwareness2" value="3"> C. Disagree<br>
+          <input type="radio" name="selfAwareness2" value="4"> D. Strongly Disagree<br>
+        </div>
+        <div class="question">
+          <label>I take time to reflect on my emotions and what triggers them.</label><br>
+          <input type="radio" name="selfAwareness3" value="1"> A. Strongly Agree<br>
+          <input type="radio" name="selfAwareness3" value="2"> B. Agree<br>
+          <input type="radio" name="selfAwareness3" value="3"> C. Disagree<br>
+          <input type="radio" name="selfAwareness3" value="4"> D. Strongly Disagree<br>
+        </div>
+      </div>
+      <div id="selfManagement" class="section">
+        <h2>Section 2: Self-Management</h2>
+        <div class="question">
+          <label>I am able to regulate my emotions effectively.</label><br>
+          <input type="radio" name="selfManagement1" value="1"> A. Strongly Agree<br>
+          <input type="radio" name="selfManagement1" value="2"> B. Agree<br>
+          <input type="radio" name="selfManagement1" value="3"> C. Disagree<br>
+          <input type="radio" name="selfManagement1" value="4"> D. Strongly Disagree<br>
+        </div>
+        <div class="question">
+          <label>I am able to control my impulses and react appropriately in different situations.</label><br>
+          <input type="radio" name="selfManagement2" value="1"> A. Strongly Agree<br>
+          <input type="radio" name="selfManagement2" value="2"> B. Agree<br>
+          <input type="radio" name="selfManagement2" value="3"> C. Disagree<br>
+          <input type="radio" name="selfManagement2" value="4"> D. Strongly Disagree<br>
+        </div>
+        <div class="question">
+          <label>I am able to adapt to change and remain calm under pressure.</label><br>
+          <input type="radio" name="selfManagement3" value="1"> A. Strongly Agree<br>
+          <input type="radio" name="selfManagement3" value="2"> B. Agree<br>
+          <input type="radio" name="selfManagement3" value="3"> C. Disagree<br>
+          <input type="radio" name="selfManagement3" value="4"> D. Strongly Disagree<br>
+        </div>
+      </div>
+      <div id="socialAwareness" class="section">
+        <h2>Section 3: Social Awareness</h2>
+        <div class="question">
+          <label>I am able to recognize and understand other people's emotions.</label><br>
+          <input type="radio" name="socialAwareness1" value="1"> A. Strongly Agree<br>
+          <input type="radio" name="socialAwareness1" value="2"> B. Agree<br>
+          <input type="radio" name="socialAwareness1" value="3"> C. Disagree<br>
+          <input type="radio" name="socialAwareness1" value="4"> D. Strongly Disagree<br>
+        </div>
+        <div class="question">
+          <label>I am aware of non-verbal cues and signals in social situations.</label><br>
+          <input type="radio" name="socialAwareness2" value="1"> A. Strongly Agree<br>
+          <input type="radio" name="socialAwareness2" value="2"> B. Agree<br>
+          <input type="radio" name="socialAwareness2" value="3"> C. Disagree<br>
+          <input type="radio" name="socialAwareness2" value="4"> D. Strongly Disagree<br>
+        </div>
+        <div class="question">
+          <label>I am able to empathize with others and see things from their perspective.</label><br>
+          <input type="radio" name="socialAwareness3" value="1"> A. Strongly Agree<br>
+          <input type="radio" name="socialAwareness3" value="2"> B. Agree<br>
+          <input type="radio" name="socialAwareness3" value="3"> C. Disagree<br>
+          <input type="radio" name="socialAwareness3" value="4"> D. Strongly Disagree<br>
+        </div>
+      </div>
+      <div id="relationshipManagement" class="section">
+        <h2>Section 4: Relationship Management</h2>
+        <div class="question">
+          <label>I am able to communicate my emotions effectively to others.</label><br>
+          <input type="radio" name="relationshipManagement1" value="1"> A. Strongly Agree<br>
+          <input type="radio" name="relationshipManagement1" value="2"> B. Agree<br>
+          <input type="radio" name="relationshipManagement1" value="3"> C. Disagree<br>
+          <input type="radio" name="relationshipManagement1" value="4"> D. Strongly Disagree<br>
+        </div>
+        <div class="question">
+          <label>I am able to resolve conflicts with others in a constructive and positive way.</label><br>
+          <input type="radio" name="relationshipManagement2" value="1"> A. Strongly Agree<br>
+          <input type="radio" name="relationshipManagement2" value="2"> B. Agree<br>
+          <input type="radio" name="relationshipManagement2" value="3"> C. Disagree<br>
+          <input type="radio" name="relationshipManagement2" value="4"> D. Strongly Disagree<br>
+        </div>
+        <div class="question">
+          <label>I am able to build and maintain strong relationships with others.</label><br>
+          <input type="radio" name="relationshipManagement3" value="1"> A. Strongly Agree<br>
+          <input type="radio" name="relationshipManagement3" value="2"> B. Agree<br>
+          <input type="radio" name="relationshipManagement3" value="3"> C. Disagree<br>
+          <input type="radio" name="relationshipManagement3" value="4"> D. Strongly Disagree<br>
+        </div>
+      </div>
+      <button type="submit">Submit</button>
+    </form>
+  </div>
+
+  <script src="EQI_SCRIPT.js"></script>
+</body>
+</html>
+-->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Emotional Intelligence Test</title>
+  <link rel="stylesheet" href="EQI_STYLE.css">
+</head>
+<body>
+
+  <div class="intro-container">
+    <h1>Welcome to the Emotional Intelligence Test</h1>
+    <form id="introForm">
+      <label for="name">Name:</label>
+      <input type="text" id="name" name="name" required><br><br>
+      <label for="age">Age:</label>
+      <input type="number" id="age" name="age" required><br><br>
+      <label for="gender">Gender:</label>
+      <select id="gender" name="gender" required>
+        <option value="male">Male</option>
+        <option value="female">Female</option>
+        <option value="other">Other</option>
+      </select><br><br>
+      <button type="button" id="startTest">Start Test</button>
+    </form>
+  </div>
+
+  <div class="test-container" id="testContainer" style="display:none;">
+    <h1>EQ Test</h1>
+    <form id="eqForm" action="EQI_SUBMIT.php" method="POST">
+      <!-- Include hidden fields to transfer initial form data -->
+      <input type="hidden" name="name" id="hiddenName">
+      <input type="hidden" name="age" id="hiddenAge">
+      <input type="hidden" name="gender" id="hiddenGender">
+
+      <div id="selfAwareness" class="section">
+        <h2>Section 1: Self-Awareness</h2>
+        <!-- Questions omitted for brevity -->
+        <div class="question">
+            <label>I am able to recognize my emotions as they happen.</label><br>
+            <input type="radio" name="selfAwareness1" value="1"> A. Strongly Agree<br>
+            <input type="radio" name="selfAwareness1" value="2"> B. Agree<br>
+            <input type="radio" name="selfAwareness1" value="3"> C. Disagree<br>
+            <input type="radio" name="selfAwareness1" value="4"> D. Strongly Disagree<br>
+          </div>
+        <div class="question">
+            <label>I am aware of how my emotions impact others around me.</label><br>
+            <input type="radio" name="selfAwareness2" value="1"> A. Strongly Agree<br>
+            <input type="radio" name="selfAwareness2" value="2"> B. Agree<br>
+            <input type="radio" name="selfAwareness2" value="3"> C. Disagree<br>
+            <input type="radio" name="selfAwareness2" value="4"> D. Strongly Disagree<br>
+          </div>
+        <div class="question">
+            <label>I take time to reflect on my emotions and what triggers them.</label><br>
+            <input type="radio" name="selfAwareness3" value="1"> A. Strongly Agree<br>
+            <input type="radio" name="selfAwareness3" value="2"> B. Agree<br>
+            <input type="radio" name="selfAwareness3" value="3"> C. Disagree<br>
+            <input type="radio" name="selfAwareness3" value="4"> D. Strongly Disagree<br>
+          </div>
+      </div>
+      <div id="selfManagement" class="section">
+        <h2>Section 2: Self-Management</h2>
+        <!-- Questions omitted for brevity -->
+        <div class="question">
+            <label>I am able to regulate my emotions effectively.</label><br>
+            <input type="radio" name="selfManagement1" value="1"> A. Strongly Agree<br>
+            <input type="radio" name="selfManagement1" value="2"> B. Agree<br>
+            <input type="radio" name="selfManagement1" value="3"> C. Disagree<br>
+            <input type="radio" name="selfManagement1" value="4"> D. Strongly Disagree<br>
+          </div>
+        <div class="question">
+            <label>I am able to control my impulses and react appropriately in different situations.</label><br>
+            <input type="radio" name="selfManagement2" value="1"> A. Strongly Agree<br>
+            <input type="radio" name="selfManagement2" value="2"> B. Agree<br>
+            <input type="radio" name="selfManagement2" value="3"> C. Disagree<br>
+            <input type="radio" name="selfManagement2" value="4"> D. Strongly Disagree<br>
+          </div>
+        <div class="question">
+            <label>I am able to adapt to change and remain calm under pressure.</label><br>
+            <input type="radio" name="selfManagement3" value="1"> A. Strongly Agree<br>
+            <input type="radio" name="selfManagement3" value="2"> B. Agree<br>
+            <input type="radio" name="selfManagement3" value="3"> C. Disagree<br>
+            <input type="radio" name="selfManagement3" value="4"> D. Strongly Disagree<br>
+          </div>
+
+      </div>
+      <div id="socialAwareness" class="section">
+        <h2>Section 3: Social Awareness</h2>
+        <!-- Questions omitted for brevity -->
+        <div class="question">
+            <label>I am able to recognize and understand other people's emotions.</label><br>
+            <input type="radio" name="socialAwareness1" value="1"> A. Strongly Agree<br>
+            <input type="radio" name="socialAwareness1" value="2"> B. Agree<br>
+            <input type="radio" name="socialAwareness1" value="3"> C. Disagree<br>
+            <input type="radio" name="socialAwareness1" value="4"> D. Strongly Disagree<br>
+          </div>
+          <div class="question">
+            <label>I am aware of non-verbal cues and signals in social situations.</label><br>
+            <input type="radio" name="socialAwareness2" value="1"> A. Strongly Agree<br>
+            <input type="radio" name="socialAwareness2" value="2"> B. Agree<br>
+            <input type="radio" name="socialAwareness2" value="3"> C. Disagree<br>
+            <input type="radio" name="socialAwareness2" value="4"> D. Strongly Disagree<br>
+          </div>
+          <div class="question">
+            <label>I am able to empathize with others and see things from their perspective.</label><br>
+            <input type="radio" name="socialAwareness3" value="1"> A. Strongly Agree<br>
+            <input type="radio" name="socialAwareness3" value="2"> B. Agree<br>
+            <input type="radio" name="socialAwareness3" value="3"> C. Disagree<br>
+            <input type="radio" name="socialAwareness3" value="4"> D. Strongly Disagree<br>
+          </div>
+
+      </div>
+      <div id="relationshipManagement" class="section">
+        <h2>Section 4: Relationship Management</h2>
+        <!-- Questions omitted for brevity -->
+        <div class="question">
+            <label>I am able to communicate my emotions effectively to others.</label><br>
+            <input type="radio" name="relationshipManagement1" value="1"> A. Strongly Agree<br>
+            <input type="radio" name="relationshipManagement1" value="2"> B. Agree<br>
+            <input type="radio" name="relationshipManagement1" value="3"> C. Disagree<br>
+            <input type="radio" name="relationshipManagement1" value="4"> D. Strongly Disagree<br>
+          </div>
+          <div class="question">
+            <label>I am able to resolve conflicts with others in a constructive and positive way.</label><br>
+            <input type="radio" name="relationshipManagement2" value="1"> A. Strongly Agree<br>
+            <input type="radio" name="relationshipManagement2" value="2"> B. Agree<br>
+            <input type="radio" name="relationshipManagement2" value="3"> C. Disagree<br>
+            <input type="radio" name="relationshipManagement2" value="4"> D. Strongly Disagree<br>
+          </div>
+          <div class="question">
+            <label>I am able to build and maintain strong relationships with others.</label><br>
+            <input type="radio" name="relationshipManagement3" value="1"> A. Strongly Agree<br>
+            <input type="radio" name="relationshipManagement3" value="2"> B. Agree<br>
+            <input type="radio" name="relationshipManagement3" value="3"> C. Disagree<br>
+            <input type="radio" name="relationshipManagement3" value="4"> D. Strongly Disagree<br>
+          </div>
+      </div>
+      <button type="submit">Submit</button>
+    </form>
+  </div>
+
+  <script src="EQI_SCRIPT.js"></script>
+</body>
+</html>

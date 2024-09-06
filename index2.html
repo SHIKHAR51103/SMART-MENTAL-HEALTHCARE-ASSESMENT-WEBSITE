@@ -1,0 +1,208 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <title>Sanjeevani</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" integrity="sha384-9ndCyUaIbzAi2FUVXJi0CjmCapSmO7SnpJef0486qhLnuZ2cdeRhO02iuK6FUUVM" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" integrity="sha384-k6RqeWeci5ZR/Lv4MR0sA0FfDOM5LFpP5a7nZd3/ji59kxY5H8uZ5o/m6LGFpXJ" crossorigin="anonymous">
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f0f8ff;
+        }
+
+        .navbar {
+            background-color: #007bff;
+        }
+
+        .navbar-brand,
+        .nav-link {
+            color: #fff !important;
+        }
+
+        #welcome-section {
+            background-color: #e0f7fa;
+            padding: 50px;
+            text-align: center;
+        }
+
+        .card-deck {
+            display: flex;
+            justify-content: space-around;
+            margin-top: 20px;
+        }
+
+        .card {
+            margin: 20px;
+            flex: 1;
+            max-width: 300px;
+        }
+
+        .carousel-item img {
+            max-height: 400px;
+            object-fit: cover;
+        }
+
+        #clock {
+            font-size: 1.5em;
+            text-align: center;
+            margin: 20px 0;
+        }
+
+        .footer {
+            background-color: #007bff;
+            color: white;
+            padding: 20px;
+            text-align: center;
+        }
+    </style>
+</head>
+
+<body>
+    <nav class="navbar navbar-expand-lg">
+        <div class="container-fluid">
+            <a class="navbar-brand" href="#">Sanjeevani</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasNavbar" aria-controls="offcanvasNavbar">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="offcanvas offcanvas-end" tabindex="-1" id="offcanvasNavbar" aria-labelledby="offcanvasNavbarLabel">
+                <div class="offcanvas-header">
+                    <h5 class="offcanvas-title" id="offcanvasNavbarLabel">Sanjeevani | Menu</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+                </div>
+                <div class="offcanvas-body">
+                    <ul class="navbar-nav justify-content-end flex-grow-1 pe-3">
+                        <li class="nav-item">
+                            <a class="nav-link active" aria-current="page" href="#">Home</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#">All tests</a>
+                        </li>
+                        <li class="nav-item dropdown">
+                            <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                                Expand tests
+                            </a>
+                            <ul class="dropdown-menu">
+                                <li><a class="dropdown-item" href="EQI_HTML.html">EQI Test</a></li>
+                                <li><a class="dropdown-item" href="BDI_HTML.html">BDI Test</a></li>
+                                <li><a class="dropdown-item" href="WAIS_HTML.html">WAIS Test</a></li>
+                                <li><a class="dropdown-item" href="PSS_HTML.html">PSS Test</a></li>
+                                <li><a class="dropdown-item" href="COLOR_TEST.html">COLOR Test</a></li>
+                                <li>
+                                    <hr class="dropdown-divider">
+                                </li>
+                                <li>
+                                    <p class="dropdown-item">Click on the above tests to take your test</p>
+                                </li>
+                            </ul>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <div id="welcome-section">
+        <h1>Welcome...</h1>
+        <p>Take the psychological tests today, and find out more about yourself and gain awareness towards your mental health.</p>
+        <p>We care! Your health matters. Know your vitals today and give your health a new spark.</p>
+    </div>
+
+    <div id="carouselExampleIndicators" class="carousel slide" data-bs-ride="carousel">
+        <div class="carousel-indicators">
+            <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
+            <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="1" aria-label="Slide 2"></button>
+            <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="2" aria-label="Slide 3"></button>
+        </div>
+        <div class="carousel-inner">
+            <div class="carousel-item active">
+                <img src="https://via.placeholder.com/800x400?text=Welcome+to+Sanjeevani" class="d-block w-100" alt="...">
+            </div>
+            <div class="carousel-item">
+                <img src="https://via.placeholder.com/800x400?text=Mental+Health+Matters" class="d-block w-100" alt="...">
+            </div>
+            <div class="carousel-item">
+                <img src="https://via.placeholder.com/800x400?text=Take+Your+Test+Today" class="d-block w-100" alt="...">
+            </div>
+        </div>
+        <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide="prev">
+            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+            <span class="visually-hidden">Previous</span>
+        </button>
+        <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide="next">
+            <span class="carousel-control-next-icon" aria-hidden="true"></span>
+            <span class="visually-hidden">Next</span>
+        </button>
+    </div>
+
+    <div id="clock"></div>
+
+    <h1 class="text-center my-4">Take your test today</h1>
+
+    <div class="card-deck">
+        <div class="card">
+            <img src="https://via.placeholder.com/150?text=EQI" class="card-img-top" alt="EQI Test">
+            <div class="card-body">
+                <h5 class="card-title">Emotional Intelligence Test (EQI)</h5>
+                <p class="card-text">Take the EQI test to understand your emotional intelligence level.</p>
+                <a href="EQI_HTML.html" class="btn btn-primary">Take the Test</a>
+            </div>
+        </div>
+        <div class="card">
+            <img src="https://via.placeholder.com/150?text=BDI" class="card-img-top" alt="BDI Test">
+            <div class="card-body">
+                <h5 class="card-title">Beck's Depression Inventory (BDI)</h5>
+                <p class="card-text">Take the BDI test to assess the severity of your depression.</p>
+                <a href="BDI_HTML.html" class="btn btn-primary">Take the Test</a>
+            </div>
+        </div>
+        <div class="card">
+            <img src="https://via.placeholder.com/150?text=WAIS" class="card-img-top" alt="WAIS Test">
+            <div class="card-body">
+                <h5 class="card-title">Wechsler Adult Intelligence Scale (WAIS)</h5>
+                <p class="card-text">Take the WAIS test to measure your cognitive abilities and IQ.</p>
+                <a href="WAIS_HTML.html" class="btn btn-primary">Take the Test</a>
+            </div>
+        </div>
+        <div class="card">
+            <img src="https://via.placeholder.com/150?text=PSS" class="card-img-top" alt="PSS Test">
+            <div class="card-body">
+                <h5 class="card-title">Perceived Stress Scale (PSS)</h5>
+                <p class="card-text">Take the PSS test to evaluate your perception of stress.</p>
+                <a href="PSS_HTML.html" class="btn btn-primary">Take the Test</a>
+            </div>
+        </div>
+        <div class="card">
+            <img src="https://via.placeholder.com/150?text=Color+Test" class="card-img-top" alt="Color Test">
+            <div class="card-body">
+                <h5 class="card-title">Color Name Guessing Test</h5>
+                <p class="card-text">Guess the color name in this fun test of perception and memory.</p>
+                <a href="COLOR_TEST.html" class="btn btn-primary">Take the Test</a>
+            </div>
+        </div>
+    </div>
+
+    <div class="footer">
+        <p>&copy; 2023 Sanjeevani. All rights reserved.</p>
+        <p>We care! Your health matters. Know your vitals today and give your health a new spark.</p>
+    </div>
+
+    <script>
+        function updateClock() {
+            const now = new Date();
+            const hours = now.getHours().toString().padStart(2, '0');
+            const minutes = now.getMinutes().toString().padStart(2, '0');
+            const seconds = now.getSeconds().toString().padStart(2, '0');
+            const timeString = `${hours}:${minutes}:${seconds}`;
+            document.getElementById('clock').textContent = timeString;
+        }
+        setInterval(updateClock, 1000);
+        updateClock();
+    </script>
+
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.6/dist/umd/popper.min.js" integrity="sha384-oBqDVmMz4fnFO9gybBogGz1C8FDm72AlSksAz9FNHVoC2UNx9I8dUHLMKOM7sCFm" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.min.js" integrity="sha384-q20I1T6w92I6mY0Cx43Aka0PsyCq4H2VtSg5coY1ofvFfbgvTrgi0eCkaDT+8XY7" crossorigin="anonymous"></script>
+</body>
+
+</html>
